@@ -1,65 +1,30 @@
-'use client';
-import styles from "./page.module.css"
-import Layout from './fixLayout';
-import { FC } from 'react';
-import Head from 'next/head';
-import FloatingButton from './FloatingButton';
-
-import './Header.css';
-
-
-const Home: FC = () => {
+import React from 'react';
+import './contatoestilo.css';
+const ContactInfoPage = () => {
   return (
-    <Layout>
-      
-       <div className="header-container">
-        <div className="logo">
-        </div>
-        <div className={styles.container}>
-          <Head>
-            <title>SYSVET</title>
-            <meta name="description" content="Sysvet" />
-          </Head>
-          <main className={styles.main}>
-           <h4 className={styles.description}>
-              Cuidados com seu pet em primeiro lugar!
-            </h4>
+    <div className="contact-info-container">
+      <h1>Contate a Nossa Empresa</h1>
+      <p>Estamos sempre prontos para ajudar. Entre em contato através das informações abaixo:</p>
 
-            <div className={styles.grid}>
-              <a href="/exames" className={styles.card}>
-                <h3>Cadastre seu Pet &rarr;</h3>
-                <p>Agende exames, consultas e vacinas com nossos veterinários especialistas.</p>
-              </a>
+      <div className="contact-details">
+        <h3>Telefone:</h3>
+        <p>(11) 98765-4321</p>
 
-              <a href="/dashboard" className={styles.card}>
-                <h3>Acompanhamento &rarr;</h3>
-                <p>Entenda de forma completa a rotina de seus pets.</p>
-              </a>
+        <h3>E-mail:</h3>
+        <p>contato@nossaempresa.com</p>
 
-              <a href="/listaDog" className={styles.card}>
-                <h3>Informações de animais &rarr;</h3>
-                <p>teste</p>
-              </a>
-            </div>
-            <FloatingButton><div></div></FloatingButton>
-          </main>
+        <h3>Endereço:</h3>
+        <p>Rua das Flores, 123 - São Paulo, SP</p>
 
-          <footer className={styles.footer}>
-            <a
-              href="https://veterinariaamigavel.com"
-              target="_blank"
-              rel="copy"
-            >
-              SYSVET- Sistema veterinário integrado &copy; {new Date().getFullYear()}
-            </a>
-          </footer>
-        </div>
+        <h3>Redes Sociais:</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/nossaempresa" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.instagram.com/nossaempresa" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/nossaempresa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
       </div>
-      
-    </Layout>
-    
- 
+    </div>
   );
-}
+};
 
-export default Home;
+export default ContactInfoPage;
